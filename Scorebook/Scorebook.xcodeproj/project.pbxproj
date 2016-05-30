@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		ABAC51E01CFCCFF0000FA80F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC51DF1CFCCFF0000FA80F /* AppDelegate.swift */; };
-		ABAC51E21CFCCFF0000FA80F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC51E11CFCCFF0000FA80F /* ViewController.swift */; };
+		ABAC51E21CFCCFF0000FA80F /* PlateAppearanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC51E11CFCCFF0000FA80F /* PlateAppearanceViewController.swift */; };
 		ABAC51E51CFCCFF0000FA80F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAC51E31CFCCFF0000FA80F /* Main.storyboard */; };
 		ABAC51E71CFCCFF0000FA80F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAC51E61CFCCFF0000FA80F /* Assets.xcassets */; };
 		ABAC51EA1CFCCFF0000FA80F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAC51E81CFCCFF0000FA80F /* LaunchScreen.storyboard */; };
 		ABAC51F51CFCCFF1000FA80F /* ScorebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC51F41CFCCFF1000FA80F /* ScorebookTests.swift */; };
 		ABAC52001CFCCFF1000FA80F /* ScorebookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC51FF1CFCCFF1000FA80F /* ScorebookUITests.swift */; };
+		ABAC520F1CFCD039000FA80F /* PlateAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC520E1CFCD039000FA80F /* PlateAppearance.swift */; };
+		ABAC52111CFCD101000FA80F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC52101CFCD101000FA80F /* Game.swift */; };
+		ABAC52131CFCD17C000FA80F /* NewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC52121CFCD17C000FA80F /* NewGameViewController.swift */; };
+		ABAC52151CFCD1AC000FA80F /* BoxScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC52141CFCD1AC000FA80F /* BoxScoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 /* Begin PBXFileReference section */
 		ABAC51DC1CFCCFF0000FA80F /* Scorebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scorebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAC51DF1CFCCFF0000FA80F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ABAC51E11CFCCFF0000FA80F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ABAC51E11CFCCFF0000FA80F /* PlateAppearanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateAppearanceViewController.swift; sourceTree = "<group>"; };
 		ABAC51E41CFCCFF0000FA80F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABAC51E61CFCCFF0000FA80F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABAC51E91CFCCFF0000FA80F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		ABAC51FB1CFCCFF1000FA80F /* ScorebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScorebookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAC51FF1CFCCFF1000FA80F /* ScorebookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorebookUITests.swift; sourceTree = "<group>"; };
 		ABAC52011CFCCFF1000FA80F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABAC520E1CFCD039000FA80F /* PlateAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateAppearance.swift; sourceTree = "<group>"; };
+		ABAC52101CFCD101000FA80F /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		ABAC52121CFCD17C000FA80F /* NewGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGameViewController.swift; sourceTree = "<group>"; };
+		ABAC52141CFCD1AC000FA80F /* BoxScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxScoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +105,11 @@
 		ABAC51DE1CFCCFF0000FA80F /* Scorebook */ = {
 			isa = PBXGroup;
 			children = (
+				ABAC520D1CFCD016000FA80F /* Model */,
 				ABAC51DF1CFCCFF0000FA80F /* AppDelegate.swift */,
-				ABAC51E11CFCCFF0000FA80F /* ViewController.swift */,
+				ABAC51E11CFCCFF0000FA80F /* PlateAppearanceViewController.swift */,
+				ABAC52121CFCD17C000FA80F /* NewGameViewController.swift */,
+				ABAC52141CFCD1AC000FA80F /* BoxScoreViewController.swift */,
 				ABAC51E31CFCCFF0000FA80F /* Main.storyboard */,
 				ABAC51E61CFCCFF0000FA80F /* Assets.xcassets */,
 				ABAC51E81CFCCFF0000FA80F /* LaunchScreen.storyboard */,
@@ -123,6 +134,15 @@
 				ABAC52011CFCCFF1000FA80F /* Info.plist */,
 			);
 			path = ScorebookUITests;
+			sourceTree = "<group>";
+		};
+		ABAC520D1CFCD016000FA80F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ABAC520E1CFCD039000FA80F /* PlateAppearance.swift */,
+				ABAC52101CFCD101000FA80F /* Game.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABAC51E21CFCCFF0000FA80F /* ViewController.swift in Sources */,
+				ABAC51E21CFCCFF0000FA80F /* PlateAppearanceViewController.swift in Sources */,
+				ABAC52151CFCD1AC000FA80F /* BoxScoreViewController.swift in Sources */,
+				ABAC520F1CFCD039000FA80F /* PlateAppearance.swift in Sources */,
+				ABAC52131CFCD17C000FA80F /* NewGameViewController.swift in Sources */,
 				ABAC51E01CFCCFF0000FA80F /* AppDelegate.swift in Sources */,
+				ABAC52111CFCD101000FA80F /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

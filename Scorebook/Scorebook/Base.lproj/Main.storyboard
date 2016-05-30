@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="O8l-pw-sSx">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NewGameViewController" customModule="Scorebook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,145 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJv-6O-A3c">
+                                <rect key="frame" x="261" y="285" width="78" height="30"/>
+                                <state key="normal" title="Start Game"/>
+                                <connections>
+                                    <segue destination="EXy-iO-VP3" kind="show" identifier="startGameSegue" id="cy6-O4-KGf"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HJv-6O-A3c" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Yvg-2e-4vl"/>
+                            <constraint firstItem="HJv-6O-A3c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="haK-0R-oxv"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Welcome" id="k9Y-Ut-gpf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1078" y="359"/>
+        </scene>
+        <!--Plate Appearance-->
+        <scene sceneID="Cot-ed-w9I">
+            <objects>
+                <viewController id="EXy-iO-VP3" customClass="PlateAppearanceViewController" customModule="Scorebook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N4z-Py-jgG"/>
+                        <viewControllerLayoutGuide type="bottom" id="nFP-BH-ANn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6af-tE-Gec">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsI-Ko-ol6">
+                                <rect key="frame" x="222" y="550" width="157" height="30"/>
+                                <state key="normal" title="Next Plate Appearance"/>
+                                <connections>
+                                    <segue destination="EXy-iO-VP3" kind="show" identifier="nextPlateAppearanceSegue" id="iwK-7Y-j8V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nFP-BH-ANn" firstAttribute="top" secondItem="KsI-Ko-ol6" secondAttribute="bottom" constant="20" id="8fL-Iw-wDe"/>
+                            <constraint firstItem="KsI-Ko-ol6" firstAttribute="centerX" secondItem="6af-tE-Gec" secondAttribute="centerX" id="Ojs-21-MMh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Plate Appearance" id="ulG-ua-Sga">
+                        <barButtonItem key="rightBarButtonItem" title="End Game" id="HdV-AF-e1R">
+                            <connections>
+                                <segue destination="9QN-AR-Xgg" kind="presentation" identifier="endGameSegue" id="JnP-oe-2od"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GvG-T9-Poe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1901" y="359"/>
+        </scene>
+        <!--Box Score-->
+        <scene sceneID="WIW-rj-uCi">
+            <objects>
+                <viewController id="gvt-0z-IkN" customClass="BoxScoreViewController" customModule="Scorebook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hfH-IX-rI7"/>
+                        <viewControllerLayoutGuide type="bottom" id="cR9-tQ-tJ1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oUz-Fb-u7K">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThM-VU-hPv">
+                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ThM-VU-hPv" firstAttribute="centerY" secondItem="oUz-Fb-u7K" secondAttribute="centerY" id="Bwk-Pz-S5v"/>
+                            <constraint firstItem="ThM-VU-hPv" firstAttribute="centerX" secondItem="oUz-Fb-u7K" secondAttribute="centerX" id="dMP-UF-Ob8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Box Score" id="tQh-xy-Xrq">
+                        <barButtonItem key="rightBarButtonItem" title="New Game" id="1jG-kz-HLp">
+                            <connections>
+                                <segue destination="0UR-oM-k8I" kind="unwind" unwindAction="prepareForUnwind:" id="pkp-bB-YTJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="plateAppearancesLabel" destination="ThM-VU-hPv" id="BLC-Tu-uXM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fhU-ei-aOA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="0UR-oM-k8I" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3462" y="359"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1KQ-C6-79d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O8l-pw-sSx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LRx-0s-qPm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="F7y-Xw-MjG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DXk-fs-LDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="331" y="359"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vZZ-Jt-J9I">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9QN-AR-Xgg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HoE-fk-x6A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gvt-0z-IkN" kind="relationship" relationship="rootViewController" id="scn-K0-Mfk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uZ6-Rf-ykx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2650" y="359"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="cy6-O4-KGf"/>
+    </inferredMetricsTieBreakers>
 </document>
