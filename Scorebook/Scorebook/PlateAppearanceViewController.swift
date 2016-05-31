@@ -21,7 +21,7 @@ class PlateAppearanceViewController: UIViewController, PlateAppearanceDelegate {
     }
     
     @IBAction func ballInPlayButtonTouched() {
-        plateAppearance.outcome = .Hit
+        plateAppearance.outcome = .Hit(numBases: 1)
     }
     
     override func viewDidLoad() {

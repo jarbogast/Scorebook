@@ -9,9 +9,17 @@
 import Foundation
 
 enum PlateAppearanceOutcome {
+    case Hit(numBases: Int)
     case Walk
-    case Strikeout
-    case Hit
+    case HitByPitch
+    case Error(fielder: Int)
+    case FieldersChoice
+    case DroppedThirdStrike
+    case CatcherInterference
+    case Strikeout(looking: Bool)
+    case Groundout(fielders: [Int])
+    case Lineout(fielder: Int)
+    case Flyout(fielder: Int)
 }
 
 protocol PlateAppearanceDelegate {
@@ -30,7 +38,7 @@ struct PlateAppearance {
     var strikes = 0 {
         didSet {
             if strikes >= 3 {
-                outcome = .Strikeout
+                outcome = .Strikeout(looking: true)
             }
         }
     }
