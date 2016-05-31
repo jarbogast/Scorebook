@@ -8,23 +8,43 @@
 
 import UIKit
 
-class PlateAppearanceViewController: UIViewController {
+class PlateAppearanceViewController: UIViewController, PlateAppearanceDelegate {
     var game: Game?
-    let plateAppearance = PlateAppearance()
+    var plateAppearance = PlateAppearance()
     
+    @IBAction func addBallButtonTouched() {
+        plateAppearance.balls += 1
+    }
+    
+    @IBAction func addStrikeButtonPressed() {
+        plateAppearance.strikes += 1
+    }
+    
+    @IBAction func ballInPlayButtonTouched() {
+        plateAppearance.outcome = .Hit
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        plateAppearance.delegate = self
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "nextPlateAppearanceSegue" {
-            game?.plateAppearances.append(plateAppearance)
-            
-            let plateAppearanceViewController = segue.destinationViewController as! PlateAppearanceViewController
-            plateAppearanceViewController.game = game
-        } else if segue.identifier == "endGameSegue" {
-            game?.plateAppearances.append(plateAppearance)
-            
+        if segue.identifier == "endGameSegue" {            
             let navController = segue.destinationViewController as! UINavigationController
             let boxScoreViewController = navController.childViewControllers[0] as! BoxScoreViewController
             boxScoreViewController.game = game
+        } else if segue.identifier == "nextPlateAppearanceSegue" {
+            let paViewController = segue.destinationViewController as! PlateAppearanceViewController
+            paViewController.game = game
+        }
+    }
+    
+    func plateAppearanceOutcomeDidChange(plateAppearance: PlateAppearance, outcome: PlateAppearanceOutcome?) {
+        if plateAppearance.outcome != nil {
+            game?.plateAppearances.append(plateAppearance)
+            performSegueWithIdentifier("nextPlateAppearanceSegue", sender: self)
         }
     }
 }
