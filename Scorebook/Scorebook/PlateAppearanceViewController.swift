@@ -30,9 +30,8 @@ class PlateAppearanceViewController: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "endGameSegue" {            
-            let navController = segue.destinationViewController as! UINavigationController
-            let boxScoreViewController = navController.childViewControllers[0] as! BoxScoreViewController
+        if segue.identifier == "endGameSegue" {
+            let boxScoreViewController = segue.destinationViewController as! BoxScoreViewController
             boxScoreViewController.game = game
         }
     }
