@@ -12,12 +12,12 @@
 		ABAC51E51CFCCFF0000FA80F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAC51E31CFCCFF0000FA80F /* Main.storyboard */; };
 		ABAC51E71CFCCFF0000FA80F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAC51E61CFCCFF0000FA80F /* Assets.xcassets */; };
 		ABAC51EA1CFCCFF0000FA80F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAC51E81CFCCFF0000FA80F /* LaunchScreen.storyboard */; };
-		ABAC51F51CFCCFF1000FA80F /* ScorebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC51F41CFCCFF1000FA80F /* ScorebookTests.swift */; };
-		ABAC52001CFCCFF1000FA80F /* ScorebookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC51FF1CFCCFF1000FA80F /* ScorebookUITests.swift */; };
+		ABAC51F51CFCCFF1000FA80F /* PlateAppearanceOutcomeFormatterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC51F41CFCCFF1000FA80F /* PlateAppearanceOutcomeFormatterTestCase.swift */; };
 		ABAC520F1CFCD039000FA80F /* PlateAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC520E1CFCD039000FA80F /* PlateAppearance.swift */; };
 		ABAC52111CFCD101000FA80F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC52101CFCD101000FA80F /* Game.swift */; };
 		ABAC52131CFCD17C000FA80F /* NewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC52121CFCD17C000FA80F /* NewGameViewController.swift */; };
 		ABAC52151CFCD1AC000FA80F /* BoxScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC52141CFCD1AC000FA80F /* BoxScoreViewController.swift */; };
+		ABAC52171CFE1E05000FA80F /* PlateAppearanceOutcomeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC52161CFE1E05000FA80F /* PlateAppearanceOutcomeFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,15 +46,15 @@
 		ABAC51E91CFCCFF0000FA80F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABAC51EB1CFCCFF0000FA80F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABAC51F01CFCCFF1000FA80F /* ScorebookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScorebookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABAC51F41CFCCFF1000FA80F /* ScorebookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorebookTests.swift; sourceTree = "<group>"; };
+		ABAC51F41CFCCFF1000FA80F /* PlateAppearanceOutcomeFormatterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateAppearanceOutcomeFormatterTestCase.swift; sourceTree = "<group>"; };
 		ABAC51F61CFCCFF1000FA80F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABAC51FB1CFCCFF1000FA80F /* ScorebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScorebookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABAC51FF1CFCCFF1000FA80F /* ScorebookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorebookUITests.swift; sourceTree = "<group>"; };
 		ABAC52011CFCCFF1000FA80F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABAC520E1CFCD039000FA80F /* PlateAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateAppearance.swift; sourceTree = "<group>"; };
 		ABAC52101CFCD101000FA80F /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		ABAC52121CFCD17C000FA80F /* NewGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGameViewController.swift; sourceTree = "<group>"; };
 		ABAC52141CFCD1AC000FA80F /* BoxScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxScoreViewController.swift; sourceTree = "<group>"; };
+		ABAC52161CFE1E05000FA80F /* PlateAppearanceOutcomeFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateAppearanceOutcomeFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +121,7 @@
 		ABAC51F31CFCCFF1000FA80F /* ScorebookTests */ = {
 			isa = PBXGroup;
 			children = (
-				ABAC51F41CFCCFF1000FA80F /* ScorebookTests.swift */,
+				ABAC51F41CFCCFF1000FA80F /* PlateAppearanceOutcomeFormatterTestCase.swift */,
 				ABAC51F61CFCCFF1000FA80F /* Info.plist */,
 			);
 			path = ScorebookTests;
@@ -130,7 +130,6 @@
 		ABAC51FE1CFCCFF1000FA80F /* ScorebookUITests */ = {
 			isa = PBXGroup;
 			children = (
-				ABAC51FF1CFCCFF1000FA80F /* ScorebookUITests.swift */,
 				ABAC52011CFCCFF1000FA80F /* Info.plist */,
 			);
 			path = ScorebookUITests;
@@ -141,6 +140,7 @@
 			children = (
 				ABAC520E1CFCD039000FA80F /* PlateAppearance.swift */,
 				ABAC52101CFCD101000FA80F /* Game.swift */,
+				ABAC52161CFE1E05000FA80F /* PlateAppearanceOutcomeFormatter.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -281,6 +281,7 @@
 				ABAC52151CFCD1AC000FA80F /* BoxScoreViewController.swift in Sources */,
 				ABAC520F1CFCD039000FA80F /* PlateAppearance.swift in Sources */,
 				ABAC52131CFCD17C000FA80F /* NewGameViewController.swift in Sources */,
+				ABAC52171CFE1E05000FA80F /* PlateAppearanceOutcomeFormatter.swift in Sources */,
 				ABAC51E01CFCCFF0000FA80F /* AppDelegate.swift in Sources */,
 				ABAC52111CFCD101000FA80F /* Game.swift in Sources */,
 			);
@@ -290,7 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABAC51F51CFCCFF1000FA80F /* ScorebookTests.swift in Sources */,
+				ABAC51F51CFCCFF1000FA80F /* PlateAppearanceOutcomeFormatterTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +299,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABAC52001CFCCFF1000FA80F /* ScorebookUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

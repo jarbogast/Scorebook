@@ -8,44 +8,32 @@
 
 import UIKit
 
-class PlateAppearanceViewController: UIViewController, PlateAppearanceDelegate {
+class PlateAppearanceViewController: UIViewController {
     var game: Game?
-    var plateAppearance = PlateAppearance()
     
-    @IBAction func addBallButtonTouched() {
-        plateAppearance.balls += 1
-    }
-    
-    @IBAction func addStrikeButtonPressed() {
-        plateAppearance.strikes += 1
-    }
-    
-    @IBAction func ballInPlayButtonTouched() {
-        plateAppearance.outcome = .Hit(numBases: 1)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func outcomeButtonPressed(sender: UIButton) {
+        guard let buttonTitle = sender.currentTitle else { return }
+        var plateAppearance: PlateAppearanceOutcome?
         
-        plateAppearance.delegate = self
+        switch buttonTitle {
+        case "Single": plateAppearance = PlateAppearanceOutcome(result: .Single)
+        case "Double": plateAppearance = PlateAppearanceOutcome(result: .Double)
+        case "Triple": plateAppearance = PlateAppearanceOutcome(result: .Triple)
+        case "Homerun": plateAppearance = PlateAppearanceOutcome(result: .Homerun)
+        default: break
+        }
+        
+        if let appearance = plateAppearance {
+            game?.plateAppearances.append(appearance)
+        }
     }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "endGameSegue" {            
             let navController = segue.destinationViewController as! UINavigationController
             let boxScoreViewController = navController.childViewControllers[0] as! BoxScoreViewController
             boxScoreViewController.game = game
-        } else if segue.identifier == "nextPlateAppearanceSegue" {
-            let paViewController = segue.destinationViewController as! PlateAppearanceViewController
-            paViewController.game = game
-        }
-    }
-    
-    func plateAppearanceOutcomeDidChange(plateAppearance: PlateAppearance, outcome: PlateAppearanceOutcome?) {
-        if plateAppearance.outcome != nil {
-            game?.plateAppearances.append(plateAppearance)
-            performSegueWithIdentifier("nextPlateAppearanceSegue", sender: self)
         }
     }
 }
-

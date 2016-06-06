@@ -49,35 +49,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lwW-iB-fl9">
-                                <rect key="frame" x="221.5" y="72" width="157" height="135"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eA2-Rk-etH">
+                                <rect key="frame" x="268" y="72" width="64" height="120"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFl-G4-FSy">
-                                        <rect key="frame" x="50" y="0.0" width="57" height="30"/>
-                                        <state key="normal" title="Add Ball"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rh5-QV-z3b">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="30"/>
+                                        <state key="normal" title="Single"/>
                                         <connections>
-                                            <action selector="addBallButtonTouched" destination="EXy-iO-VP3" eventType="touchUpInside" id="KMP-Q3-3lb"/>
+                                            <action selector="outcomeButtonPressed:" destination="EXy-iO-VP3" eventType="touchUpInside" id="Wts-tN-5cv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnY-GH-A9V">
-                                        <rect key="frame" x="43" y="35" width="71" height="30"/>
-                                        <state key="normal" title="Add Strike"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLR-CE-5K5">
+                                        <rect key="frame" x="0.0" y="30" width="64" height="30"/>
+                                        <state key="normal" title="Double"/>
                                         <connections>
-                                            <action selector="addStrikeButtonPressed" destination="EXy-iO-VP3" eventType="touchUpInside" id="AtV-OJ-cnD"/>
+                                            <action selector="outcomeButtonPressed:" destination="EXy-iO-VP3" eventType="touchUpInside" id="lqS-aH-BpY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsI-Ko-ol6">
-                                        <rect key="frame" x="41" y="70" width="74" height="30"/>
-                                        <state key="normal" title="Ball In Play"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fa5-BK-MqZ">
+                                        <rect key="frame" x="0.0" y="60" width="64" height="30"/>
+                                        <state key="normal" title="Triple"/>
                                         <connections>
-                                            <action selector="ballInPlayButtonTouched" destination="EXy-iO-VP3" eventType="touchUpInside" id="bJQ-go-dze"/>
+                                            <action selector="outcomeButtonPressed:" destination="EXy-iO-VP3" eventType="touchUpInside" id="Hn6-fZ-9hV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tik-lW-BBk" userLabel="Next Plate Appearance">
-                                        <rect key="frame" x="0.0" y="105" width="157" height="30"/>
-                                        <state key="normal" title="Next Plate Appearance"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6Z-Wa-qgt">
+                                        <rect key="frame" x="0.0" y="90" width="64" height="30"/>
+                                        <state key="normal" title="Homerun"/>
                                         <connections>
-                                            <segue destination="EXy-iO-VP3" kind="show" identifier="nextPlateAppearanceSegue" id="BwR-9L-Onm"/>
+                                            <action selector="outcomeButtonPressed:" destination="EXy-iO-VP3" eventType="touchUpInside" id="vxY-w6-Ju4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -85,8 +85,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lwW-iB-fl9" firstAttribute="top" secondItem="N4z-Py-jgG" secondAttribute="bottom" constant="8" id="TrP-ao-qPs"/>
-                            <constraint firstItem="lwW-iB-fl9" firstAttribute="centerX" secondItem="6af-tE-Gec" secondAttribute="centerX" id="gzK-2b-p9X"/>
+                            <constraint firstItem="eA2-Rk-etH" firstAttribute="top" secondItem="N4z-Py-jgG" secondAttribute="bottom" constant="8" symbolic="YES" id="dK3-Ls-yPy"/>
+                            <constraint firstItem="eA2-Rk-etH" firstAttribute="centerX" secondItem="6af-tE-Gec" secondAttribute="centerX" id="dmf-GA-rTU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Plate Appearance" id="ulG-ua-Sga">
@@ -180,7 +180,4 @@
             <point key="canvasLocation" x="2650" y="359"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="cy6-O4-KGf"/>
-    </inferredMetricsTieBreakers>
 </document>
