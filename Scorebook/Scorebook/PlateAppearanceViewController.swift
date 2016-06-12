@@ -20,6 +20,8 @@ class PlateAppearanceViewController: UIViewController {
         case "Double": plateAppearance = PlateAppearanceOutcome(result: .Double)
         case "Triple": plateAppearance = PlateAppearanceOutcome(result: .Triple)
         case "Homerun": plateAppearance = PlateAppearanceOutcome(result: .Homerun)
+        case "Walk": plateAppearance = PlateAppearanceOutcome(result: .Walk)
+        case "Hit By Pitch": plateAppearance = PlateAppearanceOutcome(result: .HitByPitch)
         default: break
         }
         
@@ -35,4 +37,5 @@ class PlateAppearanceViewController: UIViewController {
             boxScoreViewController.game = game
         }
     }
+    
 }

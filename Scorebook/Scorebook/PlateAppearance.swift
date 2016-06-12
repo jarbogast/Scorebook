@@ -33,6 +33,10 @@ struct PlateAppearanceOutcome {
         self.result = result
         self.fielders = fielders
     }
+    
+    func outcomeByAddingFielder(fielder: Int) -> PlateAppearanceOutcome {
+        return PlateAppearanceOutcome(result: result, fielders: fielders + [fielder])
+    }
 }
 
 extension PlateAppearanceOutcome: Equatable { }
