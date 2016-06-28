@@ -35,6 +35,12 @@ class PlateAppearanceViewController: UIViewController {
         if segue.identifier == "endGameSegue" {
             let boxScoreViewController = segue.destinationViewController as! BoxScoreViewController
             boxScoreViewController.game = game
+        } else if segue.identifier == "selectFielders" {
+            let fieldersViewController = segue.destinationViewController as! FieldersTableViewController
+            fieldersViewController.save = { [weak self] fielders in
+                let plateAppearance = PlateAppearanceOutcome(result: .error, fielders: fielders)
+                self?.game?.plateAppearances.append(plateAppearance)
+            }
         }
     }
     
