@@ -18,6 +18,7 @@
 		ABAC52131CFCD17C000FA80F /* NewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC52121CFCD17C000FA80F /* NewGameViewController.swift */; };
 		ABAC52151CFCD1AC000FA80F /* BoxScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC52141CFCD1AC000FA80F /* BoxScoreViewController.swift */; };
 		ABAC52171CFE1E05000FA80F /* PlateAppearanceOutcomeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC52161CFE1E05000FA80F /* PlateAppearanceOutcomeFormatter.swift */; };
+		ABAC70961D1EE6AD007FD3DC /* FieldersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC70951D1EE6AD007FD3DC /* FieldersTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		ABAC52121CFCD17C000FA80F /* NewGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGameViewController.swift; sourceTree = "<group>"; };
 		ABAC52141CFCD1AC000FA80F /* BoxScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxScoreViewController.swift; sourceTree = "<group>"; };
 		ABAC52161CFE1E05000FA80F /* PlateAppearanceOutcomeFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateAppearanceOutcomeFormatter.swift; sourceTree = "<group>"; };
+		ABAC70951D1EE6AD007FD3DC /* FieldersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldersTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				ABAC51E61CFCCFF0000FA80F /* Assets.xcassets */,
 				ABAC51E81CFCCFF0000FA80F /* LaunchScreen.storyboard */,
 				ABAC51EB1CFCCFF0000FA80F /* Info.plist */,
+				ABAC70951D1EE6AD007FD3DC /* FieldersTableViewController.swift */,
 			);
 			path = Scorebook;
 			sourceTree = "<group>";
@@ -208,15 +211,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Jonathan Arbogast";
 				TargetAttributes = {
 					ABAC51DB1CFCCFF0000FA80F = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 4J237JQ3KN;
+						LastSwiftMigration = 0800;
 					};
 					ABAC51EF1CFCCFF1000FA80F = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = ABAC51DB1CFCCFF0000FA80F;
 					};
 					ABAC51FA1CFCCFF1000FA80F = {
@@ -280,6 +285,7 @@
 				ABAC51E21CFCCFF0000FA80F /* PlateAppearanceViewController.swift in Sources */,
 				ABAC52151CFCD1AC000FA80F /* BoxScoreViewController.swift in Sources */,
 				ABAC520F1CFCD039000FA80F /* PlateAppearance.swift in Sources */,
+				ABAC70961D1EE6AD007FD3DC /* FieldersTableViewController.swift in Sources */,
 				ABAC52131CFCD17C000FA80F /* NewGameViewController.swift in Sources */,
 				ABAC52171CFE1E05000FA80F /* PlateAppearanceOutcomeFormatter.swift in Sources */,
 				ABAC51E01CFCCFF0000FA80F /* AppDelegate.swift in Sources */,
@@ -431,6 +437,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anothercupofcocoa.Scorebook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -443,6 +450,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anothercupofcocoa.Scorebook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -454,6 +463,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anothercupofcocoa.ScorebookTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scorebook.app/Scorebook";
 			};
 			name = Debug;
@@ -466,6 +476,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anothercupofcocoa.ScorebookTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scorebook.app/Scorebook";
 			};
 			name = Release;
@@ -511,6 +523,7 @@
 				ABAC52061CFCCFF1000FA80F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ABAC52071CFCCFF1000FA80F /* Build configuration list for PBXNativeTarget "ScorebookTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +532,7 @@
 				ABAC52091CFCCFF1000FA80F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ABAC520A1CFCCFF1000FA80F /* Build configuration list for PBXNativeTarget "ScorebookUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +541,7 @@
 				ABAC520C1CFCCFF1000FA80F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
