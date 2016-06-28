@@ -9,20 +9,20 @@
 import Foundation
 
 enum PlateAppearanceResult {
-    case Single
-    case Double
-    case Triple
-    case Homerun
-    case Walk
-    case HitByPitch
-    case Error
-    case FieldersChoice
-    case DroppedThirdStrike
-    case CatcherInterference
-    case Strikeout
-    case Groundout
-    case Lineout
-    case Flyout
+    case single
+    case double
+    case triple
+    case homerun
+    case walk
+    case hitByPitch
+    case error
+    case fieldersChoice
+    case droppedThirdStrike
+    case catcherInterference
+    case strikeout
+    case groundout
+    case lineout
+    case flyout
 }
 
 struct PlateAppearanceOutcome {
@@ -34,7 +34,7 @@ struct PlateAppearanceOutcome {
         self.fielders = fielders
     }
     
-    func outcomeByAddingFielder(fielder: Int) -> PlateAppearanceOutcome {
+    func outcomeByAddingFielder(_ fielder: Int) -> PlateAppearanceOutcome {
         return PlateAppearanceOutcome(result: result, fielders: fielders + [fielder])
     }
 }

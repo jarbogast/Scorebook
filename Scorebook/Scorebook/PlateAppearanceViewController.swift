@@ -11,17 +11,17 @@ import UIKit
 class PlateAppearanceViewController: UIViewController {
     var game: Game?
     
-    @IBAction func outcomeButtonPressed(sender: UIButton) {
+    @IBAction func outcomeButtonPressed(_ sender: UIButton) {
         guard let buttonTitle = sender.currentTitle else { return }
         var plateAppearance: PlateAppearanceOutcome?
         
         switch buttonTitle {
-        case "Single": plateAppearance = PlateAppearanceOutcome(result: .Single)
-        case "Double": plateAppearance = PlateAppearanceOutcome(result: .Double)
-        case "Triple": plateAppearance = PlateAppearanceOutcome(result: .Triple)
-        case "Homerun": plateAppearance = PlateAppearanceOutcome(result: .Homerun)
-        case "Walk": plateAppearance = PlateAppearanceOutcome(result: .Walk)
-        case "Hit By Pitch": plateAppearance = PlateAppearanceOutcome(result: .HitByPitch)
+        case "Single": plateAppearance = PlateAppearanceOutcome(result: .single)
+        case "Double": plateAppearance = PlateAppearanceOutcome(result: .double)
+        case "Triple": plateAppearance = PlateAppearanceOutcome(result: .triple)
+        case "Homerun": plateAppearance = PlateAppearanceOutcome(result: .homerun)
+        case "Walk": plateAppearance = PlateAppearanceOutcome(result: .walk)
+        case "Hit By Pitch": plateAppearance = PlateAppearanceOutcome(result: .hitByPitch)
         default: break
         }
         
@@ -31,7 +31,7 @@ class PlateAppearanceViewController: UIViewController {
     }
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "endGameSegue" {
             let boxScoreViewController = segue.destinationViewController as! BoxScoreViewController
             boxScoreViewController.game = game

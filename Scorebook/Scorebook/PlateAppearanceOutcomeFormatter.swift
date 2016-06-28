@@ -10,22 +10,22 @@ import Foundation
 
 class PlateAppearanceOutcomeFormatter {
     
-    private let outcomeToPrefix = [PlateAppearanceResult.Single: "1B",
-                                   .Double: "2B",
-                                   .Triple: "3B",
-                                   .Homerun: "HR",
-                                   .Walk: "BB",
-                                   .HitByPitch: "HBP",
-                                   .Error: "E",
-                                   .FieldersChoice: "FC",
-                                   .DroppedThirdStrike: "K WP",
-                                   .CatcherInterference: "I",
-                                   .Strikeout: "K",
-                                   .Groundout: "GO",
-                                   .Lineout: "LO",
-                                   .Flyout: "FO"]
+    private let outcomeToPrefix = [PlateAppearanceResult.single: "1B",
+                                   .double: "2B",
+                                   .triple: "3B",
+                                   .homerun: "HR",
+                                   .walk: "BB",
+                                   .hitByPitch: "HBP",
+                                   .error: "E",
+                                   .fieldersChoice: "FC",
+                                   .droppedThirdStrike: "K WP",
+                                   .catcherInterference: "I",
+                                   .strikeout: "K",
+                                   .groundout: "GO",
+                                   .lineout: "LO",
+                                   .flyout: "FO"]
     
-    func stringFromOutcome(outcome: PlateAppearanceOutcome) -> String {
+    func stringFromOutcome(_ outcome: PlateAppearanceOutcome) -> String {
         if let prefix = outcomeToPrefix[outcome.result] {
             return stringWithPrefix(prefix, fielders: outcome.fielders)
         } else {
@@ -33,8 +33,8 @@ class PlateAppearanceOutcomeFormatter {
         }
     }
     
-    func outcomeFromString(string: String) -> PlateAppearanceOutcome? {
-        let components = string.componentsSeparatedByString("-")
+    func outcomeFromString(_ string: String) -> PlateAppearanceOutcome? {
+        let components = string.components(separatedBy: "-")
         guard let stringPrefix = components.first else { return nil }
         
         for (result, prefix) in outcomeToPrefix {
@@ -46,12 +46,12 @@ class PlateAppearanceOutcomeFormatter {
         return nil
     }
     
-    private func stringWithPrefix(prefix: String, fielders: [Int]) -> String {
-        return fielders.isEmpty ? prefix : prefix + "-" + fielders.map({ String($0) }).joinWithSeparator("-")
+    private func stringWithPrefix(_ prefix: String, fielders: [Int]) -> String {
+        return fielders.isEmpty ? prefix : prefix + "-" + fielders.map({ String($0) }).joined(separator: "-")
     }
     
-    private func fieldersFromString(string: String) -> [Int] {
-        var fielderStrings = string.componentsSeparatedByString("-")
+    private func fieldersFromString(_ string: String) -> [Int] {
+        var fielderStrings = string.components(separatedBy: "-")
         fielderStrings.removeFirst()
         return fielderStrings.map({ Int($0)! })
     }
