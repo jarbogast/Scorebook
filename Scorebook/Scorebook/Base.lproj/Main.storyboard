@@ -41,7 +41,7 @@
         <!--Select Fielder(s)-->
         <scene sceneID="gzY-R8-GeP">
             <objects>
-                <tableViewController id="PJ0-t5-naZ" customClass="FieldersTableViewController" customModule="Scorebook" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FieldersTableViewController" id="PJ0-t5-naZ" customClass="FieldersTableViewController" customModule="Scorebook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="U5T-cF-wCk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

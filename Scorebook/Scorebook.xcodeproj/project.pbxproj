@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB809FC01D22CE7A006141F9 /* FieldersTableViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB809FBF1D22CE7A006141F9 /* FieldersTableViewControllerTestCase.swift */; };
 		ABAC51E01CFCCFF0000FA80F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC51DF1CFCCFF0000FA80F /* AppDelegate.swift */; };
 		ABAC51E21CFCCFF0000FA80F /* PlateAppearanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC51E11CFCCFF0000FA80F /* PlateAppearanceViewController.swift */; };
 		ABAC51E51CFCCFF0000FA80F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAC51E31CFCCFF0000FA80F /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB809FBF1D22CE7A006141F9 /* FieldersTableViewControllerTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldersTableViewControllerTestCase.swift; sourceTree = "<group>"; };
 		ABAC51DC1CFCCFF0000FA80F /* Scorebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scorebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAC51DF1CFCCFF0000FA80F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABAC51E11CFCCFF0000FA80F /* PlateAppearanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateAppearanceViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				ABAC51F41CFCCFF1000FA80F /* PlateAppearanceOutcomeFormatterTestCase.swift */,
 				ABAC51F61CFCCFF1000FA80F /* Info.plist */,
+				AB809FBF1D22CE7A006141F9 /* FieldersTableViewControllerTestCase.swift */,
 			);
 			path = ScorebookTests;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABAC51F51CFCCFF1000FA80F /* PlateAppearanceOutcomeFormatterTestCase.swift in Sources */,
+				AB809FC01D22CE7A006141F9 /* FieldersTableViewControllerTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
