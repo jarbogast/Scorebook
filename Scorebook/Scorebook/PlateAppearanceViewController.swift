@@ -10,23 +10,26 @@ import UIKit
 
 class PlateAppearanceViewController: UIViewController {
     var game: Game?
+    var pendingOutcome: PlateAppearanceOutcome?
     
     @IBAction func outcomeButtonPressed(_ sender: UIButton) {
         guard let buttonTitle = sender.currentTitle else { return }
-        var plateAppearance: PlateAppearanceOutcome?
+        var outcome: PlateAppearanceOutcome?
         
         switch buttonTitle {
-        case "Single": plateAppearance = PlateAppearanceOutcome(result: .single)
-        case "Double": plateAppearance = PlateAppearanceOutcome(result: .double)
-        case "Triple": plateAppearance = PlateAppearanceOutcome(result: .triple)
-        case "Homerun": plateAppearance = PlateAppearanceOutcome(result: .homerun)
-        case "Walk": plateAppearance = PlateAppearanceOutcome(result: .walk)
-        case "Hit By Pitch": plateAppearance = PlateAppearanceOutcome(result: .hitByPitch)
+        case "Single": outcome = PlateAppearanceOutcome(result: .single)
+        case "Double": outcome = PlateAppearanceOutcome(result: .double)
+        case "Triple": outcome = PlateAppearanceOutcome(result: .triple)
+        case "Homerun": outcome = PlateAppearanceOutcome(result: .homerun)
+        case "Walk": outcome = PlateAppearanceOutcome(result: .walk)
+        case "Hit By Pitch": outcome = PlateAppearanceOutcome(result: .hitByPitch)
+        case "Error": pendingOutcome = PlateAppearanceOutcome(result: .error)
+        case "Fielder's Choice": pendingOutcome = PlateAppearanceOutcome(result: .fieldersChoice)
         default: break
         }
         
-        if let appearance = plateAppearance {
-            game?.plateAppearances.append(appearance)
+        if let outcome = outcome {
+            game?.plateAppearances.append(PlateAppearance(outcome: outcome))
         }
     }
     
@@ -38,8 +41,10 @@ class PlateAppearanceViewController: UIViewController {
         } else if segue.identifier == "selectFielders" {
             let fieldersViewController = segue.destinationViewController as! FieldersTableViewController
             fieldersViewController.save = { [weak self] fielders in
-                let plateAppearance = PlateAppearanceOutcome(result: .error, fielders: fielders)
-                self?.game?.plateAppearances.append(plateAppearance)
+                if let finalOutcome = self?.pendingOutcome?.outcomeByAddingFielders(fielders) {
+                    self?.game?.plateAppearances.append(PlateAppearance(outcome: finalOutcome))
+                    self?.pendingOutcome = nil
+                }
             }
         }
     }

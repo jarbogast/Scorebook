@@ -281,6 +281,9 @@
                                             <segue destination="PJ0-t5-naZ" kind="show" identifier="selectFielders" id="iOO-Ps-7w2"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edv-DL-WmJ">
+                                        <state key="normal" title="Fielders Choice"/>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>

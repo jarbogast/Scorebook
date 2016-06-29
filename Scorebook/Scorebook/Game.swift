@@ -9,5 +9,5 @@
 import Foundation
 
 struct Game {
-    var plateAppearances = [PlateAppearanceOutcome]()
+    var plateAppearances = [PlateAppearance]()
 }

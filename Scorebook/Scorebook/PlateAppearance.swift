@@ -34,8 +34,8 @@ struct PlateAppearanceOutcome {
         self.fielders = fielders
     }
     
-    func outcomeByAddingFielder(_ fielder: Int) -> PlateAppearanceOutcome {
-        return PlateAppearanceOutcome(result: result, fielders: fielders + [fielder])
+    func outcomeByAddingFielders(_ fielders: [Int]) -> PlateAppearanceOutcome {
+        return PlateAppearanceOutcome(result: result, fielders: self.fielders + fielders)
     }
 }
 
