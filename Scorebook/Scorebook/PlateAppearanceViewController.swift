@@ -29,7 +29,7 @@ class PlateAppearanceViewController: UIViewController {
         }
         
         if let outcome = outcome {
-            game?.plateAppearances.append(PlateAppearance(outcome: outcome))
+            game?.plateAppearances.append(outcome)
         }
     }
     
@@ -42,7 +42,7 @@ class PlateAppearanceViewController: UIViewController {
             let fieldersViewController = segue.destinationViewController as! FieldersTableViewController
             fieldersViewController.save = { [weak self] fielders in
                 if let finalOutcome = self?.pendingOutcome?.outcomeByAddingFielders(fielders) {
-                    self?.game?.plateAppearances.append(PlateAppearance(outcome: finalOutcome))
+                    self?.game?.plateAppearances.append(finalOutcome)
                     self?.pendingOutcome = nil
                 }
             }

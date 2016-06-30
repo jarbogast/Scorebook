@@ -44,7 +44,3 @@ extension PlateAppearanceOutcome: Equatable { }
 func ==(lhs: PlateAppearanceOutcome, rhs: PlateAppearanceOutcome) -> Bool {
     return lhs.result == rhs.result && lhs.fielders == rhs.fielders
 }
-
-struct PlateAppearance {
-    let outcome: PlateAppearanceOutcome
-}
